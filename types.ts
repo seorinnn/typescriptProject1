@@ -8,6 +8,7 @@ export interface Webtoon {
 }
 
 export type RootStackParamList= {
+  Counter: undefined;
   One: undefined;
   Two: undefined;
   Three: undefined;

@@ -14,6 +14,7 @@ import ScreenThree from './screens/ScreenThree';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { RootStackParamList } from './types';
+import CounterScreen from './screens/CounterScreen';
 
 const Stack= createStackNavigator<RootStackParamList>();
 
@@ -26,6 +27,7 @@ export default function App() {
           <SafeAreaView flex={1} bg='$backgroundark950'>
             <NavigationContainer>
               <Stack.Navigator>
+                <Stack.Screen name="Counter" component={CounterScreen} options={{header:()=>(null)}}/>
                 <Stack.Screen name="One" component={ScreenOne}  options={{header:()=>(null)}}/>
                 <Stack.Screen name="Two" component={ScreenTwo} options={{header:()=>(null)}}/>
                 <Stack.Screen name="Three" component={ScreenThree} options={{header:()=>(null)}}/>
