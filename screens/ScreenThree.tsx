@@ -1,9 +1,9 @@
 import { Button, Center, Text } from '@gluestack-ui/themed';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
-import { RootStackParamList } from '../types';
+import { CounterScreensParams } from '../types';
 
 export default function ScreenThree() {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  const navigation = useNavigation<NavigationProp<CounterScreensParams>>();
 
   return (
     <Center width='$full' height='$full' bg='$red300' gap={10}>

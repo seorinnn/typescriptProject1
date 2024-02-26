@@ -23,10 +23,10 @@ export default function MediumCard({webtoon}: MediumCardProp) {
           />
           <VStack justifyContent='center' pl='$5' gap='$2'>
             <Text size='md' color='$white' fontWeight='$bold'>
-              {webtoon.author}
+              {webtoon.title}
             </Text>
             <Text size='sm' color='$white' fontWeight='$bold'>
-              {webtoon.title}
+              {webtoon.author}
             </Text>
             <HStack gap='$1'>
               <Icon as={StarIcon} color='$yellow400' fill='$yellow300'></Icon>

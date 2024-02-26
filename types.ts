@@ -1,15 +1,23 @@
-//Webtoon 타입 지정
 export interface Webtoon {
-  webtoonId: number;
+  webtoonId: string;
   title: string;
-  author: string;
   img: string;
+  author: string;
   fanCount: number;
 }
 
-export type RootStackParamList= {
+export type CounterScreensParams = {
   Counter: undefined;
   One: undefined;
   Two: undefined;
   Three: undefined;
+};
+
+export type ScreensParams = {
+  Main: undefined;
+  Search: undefined;
+};
+
+export interface WebtoonResponse {
+  webtoons: Webtoon[];
 }
