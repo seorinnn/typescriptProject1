@@ -6,11 +6,7 @@ import { useEffect } from 'react';
 import {useQuery} from '@tanstack/react-query';
 import {Webtoon} from '../types';
 import MediumCard from './Card/MediumCard';
-
-//데이터타입 지정
-interface WebtoonResponse {
-  webtoons: Webtoon[];
-}
+import { WebtoonResponse } from '../types';
 
 //데이터 가져오기
   const fetchWebtoons= async() => {
