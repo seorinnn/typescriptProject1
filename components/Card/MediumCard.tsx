@@ -1,10 +1,6 @@
-import { GluestackUIProvider, Icon, Center, Image, Text, Box, VStack, HStack, StarIcon } from '@gluestack-ui/themed';
-import { config } from '@gluestack-ui/config';
-import Swiper from 'react-native-swiper';
-import {Dimensions} from 'react-native';
-import { useEffect } from 'react';
-import {useQuery} from '@tanstack/react-query';
-import { Webtoon } from '../../types';
+import { GluestackUIProvider, Icon, Center, Image, Text, Box, VStack, HStack, StarIcon, Pressable } from '@gluestack-ui/themed';
+import { ScreensParams, Webtoon } from '../../types';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 //types.ts 에서 가져온 Webtoon
 interface MediumCardProp {
@@ -12,8 +8,9 @@ interface MediumCardProp {
 }
 
 export default function MediumCard({webtoon}: MediumCardProp) {
+  const navigation = useNavigation<NavigationProp<ScreensParams>>();
   return (
-        <HStack borderWidth='$1' borderBlockColor='$rose300'>
+        <Pressable borderWidth='$1' borderBlockColor='$rose300' flexDirection='row' onPress={()=>navigation.navigate('Detail', {webtoon})}>
           <Image 
             alt='webtoon' 
             size='xl' 
@@ -37,6 +34,6 @@ export default function MediumCard({webtoon}: MediumCardProp) {
             
           </VStack>
           
-        </HStack>
+        </Pressable>
   );
 }
